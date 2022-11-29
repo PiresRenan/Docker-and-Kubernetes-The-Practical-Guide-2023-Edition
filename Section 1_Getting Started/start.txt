@@ -32,3 +32,39 @@
 		* Encapsulamento de aplicativos e ambientes ao invés de máquinas inteiras.
 
 PARA INSTALAR O DOCKER EM WINDOWS X HOME, USE O .bat na pasta.
+
+Ferramentas e blocos de construção Docker:
+	Docker Engine = O que irá simular os OS.
+	Docker Desktop(Daemon & CLI) = A maneira que o usuario ira interagir com o Docker de maneira organica.
+	Docker Hub = Uma comunidade especialmente para usuarios Docker.
+	Docker Compose = Uma ferramenta de desenvolvimento, torna os conteiners mais complexos.
+	Kubernetes = Aquilo que com o tempo irei aprender no curso.
+
+Para executar o Docker no codigo:
+	Teremos as seguintes instruções:
+
+		FROM node:14 
+			= irá entender qual versão e qual linguagem irá ser executada no codigo.
+
+		WORKDIR /app
+			= criará um diretorio no docker onde é executado o codigo
+
+		COPY package.json .
+			= copia as dependencias
+
+		RUN npm install
+			= instala todas as dependencias
+
+		COPY . .
+			= copia todos os arquivos restantes do projeto
+
+		EXPOSE 3000
+			= abre a porta 3000, onde irá rodar o servidor
+
+		CMD [ "node", "app.mjs" ]
+			= executa o codigo
+
+Para construir a aplicação usa-se o comando "docker build ." 
+
+
+
