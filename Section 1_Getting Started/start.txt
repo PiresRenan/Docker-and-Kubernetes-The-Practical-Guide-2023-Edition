@@ -1,0 +1,34 @@
+- O que é Docker:
+	Docker é uma tecnologia	de conteiner, é uma ferramenta criada para criar e gerenciar containers.
+	Container é uma unidade padronizada de software, um pacote de codigo e dependencias para executar o código(ex. NodeJS code + NodeJS runtime). Oque quer dizer que podemos executar o codigo num mesmo container, ganhando tempo de execução.
+	Vantagens:
+		*O código sempre será o mesmo, e a ferramenta para executar sempre será a mesma, ou seja, sempre teremos o mesmo resultado na execução desse código.
+		*O código pode ser executado em locais diferentes, porém sempre manterá seu mesmo resultado, mantendo o que se precisa pra executar o código e o código juntos, "segregado" dentro de containers.
+		*O container é atualizado conjunto aos OS modernos.
+		*Docker simplifica a criação e o gerenciamento de multiplos containers.
+
+
+- Por que Containers?
+	Durante a produção de um software, temos diferentes ambientes, o de Desenvolvimento e o de Produção, surgindo assim a necessidade de isolar partes especificas do codigo para executarmos testes com as dependencias corretas e necessarias para aquele projeto.
+	Ex. Caso tenha um app que execute no NodeJS 14.2, podemos garantir que ele só execute com o NodeJS 14.2, assim prevenindo ocasionais erros que podem ocorrer por versão de NodeJS.
+	Podemos desmembrar o código para multiplos funcionarios, assim garantindo uma maior velocidade de desenvolvimento.
+	Para trabalhar sozinho, podemos garantir garantir que não teremos problemas com versionamento durante o desenvolvimento, como por exemplo usar um Python 2 e 3.11.
+
+- Virtual Machines vs. Docker Containers:
+	Com as VM's podemos criar multiplos OS simulados em cima do OS principal, podendo fazer o encapsulamento de aplicativos, livrarias, dependencias e ferramentas.Porém a o problema de sobrecarga com diversas máquinas virtuais ligadas de forma simultanea, ou seja, a consumo exagerado de recursos do computador, como memória, CPU, e disco rigido.
+	Pro(VM):
+		* Ambientes separados.
+		* Possibilidade de configurar um ambiente especifico.
+		* Configuração de ambiente pode ser compartilhada e reproduzida.
+	Con(VM):
+		* Processos redundantes e desperdicio de espaço.
+		* Performace pode ser lenta.
+		* O boot pode ser demorado.
+		* Apesar de ser reproduzivel em qualquer outra maquina, ainda deve ter um nivel de espertice, pois devem ser configurados de maneira correta em todas as maquinas.
+	Já com conteiners, ainda temos o OS padrão, mas não instalamos OS em cima de OS, ao inves disso, usa-se um suporte a container integrado, que será gerenciado pelo Docker. Então, terá uma ferramenta chamada Docker Engine. E tudo isso será configurado ao instalar o Docker. Com isso podemos então criar ambientes separados, que também podem executar livrarias, dependecias e ferramentas.
+	Pro(Docker):
+		* Baixo impacto no OS, muito rápido e uso de disco minimo.
+		* Distribuição, reconstrução e compartilhamento é fácil.
+		* Encapsulamento de aplicativos e ambientes ao invés de máquinas inteiras.
+
+PARA INSTALAR O DOCKER EM WINDOWS X HOME, USE O .bat na pasta.
