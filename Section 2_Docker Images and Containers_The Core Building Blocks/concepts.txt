@@ -1,0 +1,12 @@
+Containers = pequenos pacotes que contem a aplicação, e todo seu ambiente para rodar a aplicação.
+
+Images = são os templates/planta para os Containers, onde ficará os codigos e as ferramentas necessárias pra executar o código, enquanto o Container executa o código.
+
+ - Podemos criar uma imagem e a partir dela criar diversos containers.
+
+ - " docker run node " , pode ser um exemplo de pegar um container publico.
+
+ - " docker ps -a " mostra informações sobre a criação da imagem.
+
+ - " docker run -it node " executa o script dentro da imagem.
+
